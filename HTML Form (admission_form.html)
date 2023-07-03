@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>University Admission Form</title>
+</head>
+<body>
+    <h1>University Admission Form</h1>
+    <form method="POST" action="/submit">
+        <label for="name">Name:</label>
+        <input type="text" name="name" required><br><br>
+        
+        <label for="email">Email:</label>
+        <input type="email" name="email" required><br><br>
+        
+        <label for="program">Program of Study:</label>
+        <select name="program" required>
+            <option value="Computer Science">Computer Science</option>
+            <option value="Business Administration">Business Administration</option>
+            <option value="Engineering">Engineering</option>
+        </select><br><br>
+        
+        <label for="gpa">GPA:</label>
+        <input type="number" step="0.01" name="gpa" required><br><br>
+        
+        <label for="essay">Admission Essay:</label>
+        <textarea name="essay" required></textarea><br><br>
+        
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
