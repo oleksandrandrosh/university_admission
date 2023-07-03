@@ -1,0 +1,23 @@
+from flask import Flask, render_template, request
+
+app = Flask(__name__)
+
+@app.route('/')
+def admission_form():
+    return render_template('admission_form.html')
+
+@app.route('/submit', methods=['POST'])
+def process_form():
+    name = request.form['name']
+    email = request.form['email']
+    program = request.form['program']
+    gpa = float(request.form['gpa'])
+    essay = request.form['essay']
+    
+    # Process the form data as needed
+    # ...
+
+    return "Thank you for submitting the form, " + name + "!"
+
+if __name__ == '__main__':
+    app.run()
